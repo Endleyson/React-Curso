@@ -1,0 +1,8 @@
+.calculator{
+    height: 320px;
+    width: 320px;
+    border-radius: 5%;
+    align-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
