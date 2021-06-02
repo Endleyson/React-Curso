@@ -4,7 +4,10 @@ import './index.css'
 import Calculator from './main/Calculator'
 
 ReactDOM.render (
-   
-   <Calculator/>, document.getElementById('root')
+   <div>
+      <h1>CALCULADORA</h1>
+   <Calculator/>
+   </div>
+   , document.getElementById('root')
   
 )

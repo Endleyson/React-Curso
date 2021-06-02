@@ -1,7 +1,14 @@
 import React from 'react'
 import './Button.css'
 export default props=>{
-    return(
-    <button className='button'>{props.Label}</button>
+    let classes = 'button '
+    classes += props.operation ? 'operation' :''
+    classes += props.double ? 'double' :''
+    classes += props.ac ? 'ac' :''
+    return(      
+    <button 
+    onClick={e=>props.click && props.click(props.Label)}
+    className={classes}> 
+    {props.Label}</button>
     )
 }

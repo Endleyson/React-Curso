@@ -11,5 +11,6 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(to left, #fff, #000)
+    background: linear-gradient(to left, rgb(114, 100, 100), rgb(31, 26, 26));
+    color: white;
 }
