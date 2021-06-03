@@ -34,12 +34,12 @@ export default class Calculator extends Component{
                 values[0] = this.state.values[0]
             }
             values[1] = 0
+
             this.setState({
-                displayValue: value[0],
+                displayValue: values[0],
                 operation: equals ? null : operation,
                 current: equals ? 0 : 1,
-                clearDisplay: !equals,
-                values
+                clearDisplay: !equals, values
             })
         }
     }
@@ -68,7 +68,8 @@ export default class Calculator extends Component{
             <div className="calculator">
                 <Display value = {this.state.displayValue}></Display>
                 <Button Label = "AC" click={this.clearMemory}ac/>
-                <Button Label = "%" click={this.setOperation} operation/>
+                <Button Label = "+/-"  disable/>
+                <Button Label = "%"  disable/>
                 <Button Label = "/" click={this.setOperation} operation/>  
                 <Button Label = "7" click={this.addDigit}/>
                 <Button Label = "8" click={this.addDigit}/>

@@ -26,8 +26,11 @@
 }
 .button.ac{
     background-color: rgb(46, 0, 252);
-    grid-column: span 2;
     color:white;
+}
+.button.disable{
+    background-color: rgb(67, 67, 68);
+    color:rgb(0, 0, 0);
 }
 .button.ac:active{
     background-color: #2600fccc;

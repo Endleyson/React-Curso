@@ -5,6 +5,7 @@ export default props=>{
     classes += props.operation ? 'operation' :''
     classes += props.double ? 'double' :''
     classes += props.ac ? 'ac' :''
+    classes += props.disable ? 'disable' :''
     return(      
     <button 
     onClick={e=>props.click && props.click(props.Label)}
