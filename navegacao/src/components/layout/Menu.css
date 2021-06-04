@@ -1,7 +1,7 @@
 .Menu{
     display:flex;
     flex-basis: 200px;
-    background-color: #1e90ff;
+    background-color: #a51eff;
 }
 .Menu nav{
     flex:1;
