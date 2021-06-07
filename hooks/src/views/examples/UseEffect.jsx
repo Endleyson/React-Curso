@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { renderIntoDocument } from 'react-dom/test-utils'
 import PageTitle from '../../components/layout/PageTitle'
 import SectionTitle from '../../components/layout/SectionTitle'
 
 function calcFactorial(num){
-    const n =parseInt(num)
+    const n =parseInt(num) // tratar o erro com valores nulos
     if(n < 0) return -1
     if(n == 0) return 1
     return calcFactorial(n-1)*n
