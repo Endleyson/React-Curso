@@ -1,28 +1,7 @@
 import React,{useReducer}from 'react'
 import PageTitle from '../../components/layout/PageTitle'
-
-const initialState = {
-    cart:[],
-    products: [],
-    user: null,
-    number: 0
-}
-function reducer(state, action){
-    switch(action.type){
-        case 'number_add2':
-            return{...state, number: state.number +2}
-        case 'number_mult7':
-            return{...state, number: state.number *7}
-        case 'number_div25':
-            return{...state, number: state.number /25}
-        case 'number_int':
-            return{...state, number: parseInt(state.number)}
-        case 'login':
-            return {...state, user: {name: action.payload}}
-        default:
-            return state
-    }
-}
+import {initialState, reducer} from '../../store'
+import {number_add2, number_add11, number_sub9, login} from '../../store/actions'
 const UseReducer = (props) => {
     const [state, dispatch] =useReducer(reducer, initialState)
 
@@ -41,15 +20,19 @@ const UseReducer = (props) => {
             <div className="center">
             <div> 
                 <button className="btn"
-                onClick = {()=> dispatch({type:'login', payload: 'Duarte' }) }>Login</button>
+                onClick = {()=> login(dispatch, 'Endleyson') }>Login</button>
                 <button className="btn"
-                onClick = {()=> dispatch({type:'number_add2' }) }>+2</button>
+                onClick = {()=> number_add2(dispatch) }>+2</button>
                 <button className="btn"
                 onClick = {()=> dispatch({type:'number_mult7' }) }>*7</button>
                 <button className="btn"
                 onClick = {()=> dispatch({type:'number_div25' }) }>/25</button>
                 <button className="btn"
                 onClick = {()=> dispatch({type:'number_int' }) }>int</button>
+                <button className="btn"
+                onClick = {()=> dispatch({type:'number_add11' }) }>+11</button>
+                <button className="btn"
+                onClick = {()=> dispatch({type:'number_sub9' }) }>-9</button>
                 </div>
             </div>
         </div>
