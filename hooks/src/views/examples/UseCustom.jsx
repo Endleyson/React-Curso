@@ -9,7 +9,7 @@ const UseRef = (props) => {
     const url = 'http://files.cod3r.com.br/curso-react/estados.json'
     const response = useFetch(url)
     function showStates(states){
-        return states.map(state => <li>{state.nome} - {state.sigla}</li>)
+        return states.map(state => <li key={state.nome}>{state.nome} - {state.sigla}</li>)
     }
     return (
         <div className="UseCustom">
@@ -28,7 +28,7 @@ const UseRef = (props) => {
             <SectionTitle title="Exercicio #02"/>
                 <div className="center">
                     <ul>
-                        {showStates ? (response.data) : false}
+                        {response.data ? showStates(response.data): <span className="red">Conteúdo Bloqueado</span>}
                     </ul>
                 </div>
             
