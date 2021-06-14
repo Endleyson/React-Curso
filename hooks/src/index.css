@@ -1,6 +1,9 @@
-body {
+@font-face{
+    font-family: 'ArchitectsDaughter';
+    src: url('./fonts/ArchitectsDaughter-Regular.ttf')
+}body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'ArchitectsDaughter','Montserrat', sans-serif;
 }
 
 .text {
